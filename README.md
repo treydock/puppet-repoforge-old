@@ -1,4 +1,4 @@
-# puppet-repoforge
+# puppet-repoforge [![Build Status](https://travis-ci.org/treydock/puppet-repoforge.png)](https://travis-ci.org/treydock/puppet-repoforge)
 
 # Description
 This module basically just mimics the rpmforge-release rpm. The same repos are

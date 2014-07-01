@@ -1,5 +1,5 @@
 name    'treydock-repoforge'
-version '0.0.1'
+version '1.0.0'
 source 'http://github.com/treydock/puppet-repoforge'
 author 'treydock'
 license 'Apache License, Version 2.0'
@@ -9,3 +9,4 @@ project_page 'http://github.com/treydock/puppet-repoforge'
 
 dependency 'puppetlabs/stdlib', '>= 3.2.0'
 dependency 'treydock/gpg_key'
+

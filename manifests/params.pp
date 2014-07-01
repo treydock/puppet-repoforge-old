@@ -10,31 +10,32 @@
 #
 # === Copyright
 #
-# Copyright 2013 Trey Dockendorf
+# Copyright 2014s Trey Dockendorf
 #
 class repoforge::params {
   $gpgkey_path = '/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag'
 
-  $repoforge_baseurl             = "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/rpmforge"
-  $repoforge_mirrorlist          = "http://mirrorlist.repoforge.org/el${::os_maj_version}/mirrors-rpmforge"
-  $repoforge_enabled             = '1'
-  $repoforge_protect             = '0'
-  $repoforge_gpgkey              = "file://${gpgkey_path}"
-  $repoforge_gpgcheck            = '1'
-  $repoforge_descr               = "RHEL ${::os_maj_version} - RPMforge.net - dag"
-  $repoforge_extras_baseurl      = "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/extras"
-  $repoforge_extras_mirrorlist   = "http://mirrorlist.repoforge.org/el${::os_maj_version}/mirrors-rpmforge-extras"
-  $repoforge_extras_enabled      = '0'
-  $repoforge_extras_protect      = '0'
-  $repoforge_extras_gpgkey       = "file://${gpgkey_path}"
-  $repoforge_extras_gpgcheck     = '1'
-  $repoforge_extras_descr        = "RHEL ${::os_maj_version} - RPMforge.net - extras"
-  $repoforge_testing_baseurl     = "http://apt.sw.be/redhat/el${::os_maj_version}/en/${::architecture}/testing"
-  $repoforge_testing_mirrorlist  = "http://mirrorlist.repoforge.org/el${::os_maj_version}/mirrors-rpmforge-testing"
-  $repoforge_testing_enabled     = '0'
-  $repoforge_testing_protect     = '0'
-  $repoforge_testing_gpgkey      = "file://${gpgkey_path}"
-  $repoforge_testing_gpgcheck    = '1'
-  $repoforge_testing_descr       = "RHEL ${::os_maj_version} - RPMforge.net - testing"
+  $baseurl_host        = 'http://apt.sw.be'
+  $baseurl             = "${baseurl_host}/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/rpmforge"
+  $mirrorlist          = "http://mirrorlist.repoforge.org/el${::operatingsystemmajrelease}/mirrors-rpmforge"
+  $enabled             = '1'
+  $protect             = '0'
+  $gpgkey              = "file://${gpgkey_path}"
+  $gpgcheck            = '1'
+  $descr               = "RHEL ${::operatingsystemmajrelease} - RPMforge.net - dag"
+  $extras_baseurl      = "${baseurl_host}/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/extras"
+  $extras_mirrorlist   = "http://mirrorlist.repoforge.org/el${::operatingsystemmajrelease}/mirrors-rpmforge-extras"
+  $extras_enabled      = '0'
+  $extras_protect      = '0'
+  $extras_gpgkey       = "file://${gpgkey_path}"
+  $extras_gpgcheck     = '1'
+  $extras_descr        = "RHEL ${::operatingsystemmajrelease} - RPMforge.net - extras"
+  $testing_baseurl     = "${baseurl_host}/redhat/el${::operatingsystemmajrelease}/en/${::architecture}/testing"
+  $testing_mirrorlist  = "http://mirrorlist.repoforge.org/el${::operatingsystemmajrelease}/mirrors-rpmforge-testing"
+  $testing_enabled     = '0'
+  $testing_protect     = '0'
+  $testing_gpgkey      = "file://${gpgkey_path}"
+  $testing_gpgcheck    = '1'
+  $testing_descr       = "RHEL ${::operatingsystemmajrelease} - RPMforge.net - testing"
 
 }
